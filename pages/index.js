@@ -22,8 +22,7 @@ export default function Home() {
       >
         <h1 className="text-4xl font-bold text-white">Bienvenido a Visa Assist</h1>
         <p className="mt-4 text-lg text-gray-100">
-          Te ayudamos a gestionar todo el proceso para obtener tu visa americana.
-        </p>
+        Te acompañamos en todo el proceso para obtener tu visa americana, asegurando que tu solicitud esté lista de manera óptima </p>
         <div className="mt-6 flex space-x-4">
           <a
             href="/nueva-solicitud"
@@ -68,7 +67,7 @@ export default function Home() {
           <div className="p-6 bg-white rounded-2xl shadow-md border border-blue-200">
             <h3 className="text-xl font-bold text-blue-600 text-center">Entrenamiento para la Entrevista</h3>
             <p className="mt-3 text-gray-600 text-justify">
-              Te preparamos con simulaciones reales de entrevista, análisis de posibles preguntas, y recomendaciones específicas basadas en tu perfil. Nuestro objetivo es que llegues seguro, confiado y con una comunicación clara, lo que aumenta considerablemente tus probabilidades de éxito.
+              Te preparamos con simulacioneaas reales de entrevista, análisis de posibles preguntas, y recomendaciones específicas basadas en tu perfil. Nuestro objetivo es que llegues seguro, confiado y con una comunicación clara, lo que aumenta considerablemente tus probabilidades de éxito.
             </p>
           </div>
         </div>
@@ -76,10 +75,76 @@ export default function Home() {
 
       <section className="py-16 bg-blue-50">
         <div className="flex flex-col items-center justify-center">
-          <h2 className="text-3xl font-semibold text-blue-600">Proceso Sencillo</h2>
-          <p className="mt-4 text-center text-gray-600 max-w-2xl">
-            Hacemos que el proceso sea rápido y sin complicaciones.
-          </p>
+          <h2 className="text-3xl font-semibold text-blue-600 mb-8">Proceso Sencillo</h2>
+          <div className="w-full max-w-6xl">
+            <div className="relative">
+              {/* Línea horizontal */}
+              <div className="absolute top-[40%] w-full h-1 bg-gray-300"></div>
+
+              {/* Contenedor de pasos */}
+              <div className="grid grid-cols-5 gap-4 relative z-10">
+                {/* Paso 1 */}
+                <div className="flex flex-col items-center">
+                  <div className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full font-bold">
+                    1
+                  </div>
+                  <p className="mt-6 text-center text-gray-700 text-sm">
+                    <strong>Contáctanos y agenda tu asesoría</strong>
+                    <br />
+                    Evaluamos tu situación y resolvemos tus dudas iniciales.
+                  </p>
+                </div>
+
+                {/* Paso 2 */}
+                <div className="flex flex-col items-center">
+                  <div className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full font-bold">
+                    2
+                  </div>
+                  <p className="mt-6 text-center text-gray-700 text-sm">
+                    <strong>Realiza el pago del servicio</strong>
+                    <br />
+                    Confirmamos tu inscripción y comenzamos a trabajar contigo.
+                  </p>
+                </div>
+
+                {/* Paso 3 */}
+                <div className="flex flex-col items-center">
+                  <div className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full font-bold">
+                    3
+                  </div>
+                  <p className="mt-6 text-center text-gray-700 text-sm">
+                    <strong>Llenamos tus formularios y agendamos tu cita</strong>
+                    <br />
+                    Te asistimos con todo el papeleo.
+                  </p>
+                </div>
+
+                {/* Paso 4 */}
+                <div className="flex flex-col items-center">
+                  <div className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full font-bold">
+                    4
+                  </div>
+                  <p className="mt-6 text-center text-gray-700 text-sm">
+                    <strong>Prepárate con nosotros para la entrevista</strong>
+                    <br />
+                    Te guiamos con consejos y simulacros.
+                  </p>
+                </div>
+
+                {/* Paso 5 */}
+                <div className="flex flex-col items-center">
+                  <div className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full font-bold">
+                    5
+                  </div>
+                  <p className="mt-6 text-center text-gray-700 text-sm">
+                    <strong>Seguimiento personalizado</strong>
+                    <br />
+                    Estaremos en contacto continuo hasta el final.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
