@@ -24,14 +24,14 @@ export default function Step3({ formData, handleChange, handleAutoFill }) {
         <label htmlFor="personaPagaViaje" className="block text-gray-700 font-medium mb-1">
           Persona que paga el viaje
         </label>
-        <small className="text-gray-500 mb-1">Ingresa el nombre completo de la persona que paga el viaje (solo letras, espacios y acentos).</small>
+        <small className="text-gray-500 mb-1">Ingresa el nombre completo de la persona que paga el viaje.</small>
         <input
           type="text"
           id="personaPagaViaje"
           name="personaPagaViaje"
           value={formData.personaPagaViaje}
           onChange={handleChange}
-          className="p-2 border rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="p-2 border rounded w-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
           title="El nombre solo puede contener letras, espacios y acentos."
           maxLength="50"
@@ -51,7 +51,7 @@ export default function Step3({ formData, handleChange, handleAutoFill }) {
           name="relacionSolicitante"
           value={formData.relacionSolicitante}
           onChange={handleChange}
-          className="p-2 border rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="p-2 border rounded w-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
           title="La relación solo puede contener letras, espacios y acentos."
           maxLength="50"
@@ -71,7 +71,7 @@ export default function Step3({ formData, handleChange, handleAutoFill }) {
           name="direccion"
           value={formData.direccion}
           onChange={handleChange}
-          className="p-2 border rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="p-2 border rounded w-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
       </div>
@@ -88,7 +88,7 @@ export default function Step3({ formData, handleChange, handleAutoFill }) {
           name="colonia"
           value={formData.colonia}
           onChange={handleChange}
-          className="p-2 border rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="p-2 border rounded w-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
       </div>
@@ -105,7 +105,7 @@ export default function Step3({ formData, handleChange, handleAutoFill }) {
           name="ciudad"
           value={formData.ciudad}
           onChange={handleChange}
-          className="p-2 border rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="p-2 border rounded w-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
       </div>
@@ -122,7 +122,7 @@ export default function Step3({ formData, handleChange, handleAutoFill }) {
           name="estado"
           value={formData.estado}
           onChange={handleChange}
-          className="p-2 border rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="p-2 border rounded w-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
       </div>
@@ -139,7 +139,7 @@ export default function Step3({ formData, handleChange, handleAutoFill }) {
           name="codigoPostal"
           value={formData.codigoPostal}
           onChange={handleChange}
-          className="p-2 border rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="p-2 border rounded w-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           pattern="^\d{5}$"
           title="El código postal debe contener exactamente 5 dígitos."
           required
@@ -158,7 +158,7 @@ export default function Step3({ formData, handleChange, handleAutoFill }) {
           name="correo"
           value={formData.correo}
           onChange={handleChange}
-          className="p-2 border rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="p-2 border rounded w-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
           title="El correo debe contener un '@' y un dominio válido."
           required
@@ -177,7 +177,7 @@ export default function Step3({ formData, handleChange, handleAutoFill }) {
           name="telefono"
           value={formData.telefono}
           onChange={handleChange}
-          className="p-2 border rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="p-2 border rounded w-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           pattern="^\d{10}$"
           title="El número de teléfono debe contener exactamente 10 dígitos."
           required
