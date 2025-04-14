@@ -1,6 +1,6 @@
 export default function Step3({ formData, handleChange, handleAutoFill }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {/* Encabezado */}
       <h2 className="text-xl font-bold text-gray-700 col-span-2">✈️ REFERENCIAS DE VIAJE</h2>
 
