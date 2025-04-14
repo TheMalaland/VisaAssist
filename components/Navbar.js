@@ -26,25 +26,24 @@ export default function Navbar() {
   return (
     <nav className="bg-gray-300 shadow p-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        {/* Título con imagen de fondo */}
-        <div className="relative flex items-center">
+        {/* Logo clickeable */}
+        <a href="/" className="relative flex items-center">
           <h1 className="text-xl font-bold text-blue-600 relative z-10">
             Visa <span className="relative">Assist</span>
           </h1>
           <div
             className="absolute inset-0 opacity-85"
             style={{
-              backgroundImage: "url('/flaga.jpg')",
+              backgroundImage: "url('/flagamerican.png')",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
               backgroundSize: "50px",
             }}
           ></div>
-        </div>
+        </a>
 
         {/* Menú de escritorio */}
         <div className="hidden md:flex space-x-6 items-center">
-          <a href="/" className="text-gray-700 hover:text-blue-500">Inicio</a>
           <a href="/agendar" className="text-gray-700 hover:text-blue-500">Agendar</a>
           <a href="/pagar" className="text-gray-700 hover:text-blue-500">Pagar</a>
           <a href="/contacto" className="text-gray-700 hover:text-blue-500">Contacto</a>
@@ -86,7 +85,6 @@ export default function Navbar() {
       {/* Menú desplegable móvil */}
       {isOpen && (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-50 z-50 flex flex-col items-center justify-center px-6">
-          <a href="/" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">Inicio</a>
           <a href="/agendar" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">Agendar</a>
           <a href="/pagar" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">Pagar</a>
           <a href="/contacto" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">Contacto</a>
