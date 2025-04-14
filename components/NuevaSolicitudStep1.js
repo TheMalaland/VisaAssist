@@ -1,4 +1,19 @@
+import { countries } from 'countries-list';
+
 export default function Step1({ formData, handleChange }) {
+    const countryList = Object.values(countries);
+    const statesByCountry = {
+    México: ['Yucatán', 'Quintana Roo', 'Ciudad de México'],
+    'Estados Unidos': ['California', 'Texas', 'Nueva York'],
+    Canadá: ['Ontario', 'Quebec', 'Columbia Británica'],
+  };
+
+  const citiesByState = {
+    Yucatán: ['Mérida', 'Valladolid', 'Progreso'],
+    Texas: ['Houston', 'Dallas', 'Austin'],
+    Ontario: ['Toronto', 'Ottawa', 'Hamilton'],
+  };
+
   return (
     <div className="grid grid-cols-1 gap-4">
       <div>
@@ -106,10 +121,11 @@ export default function Step1({ formData, handleChange }) {
             required
           >
             <option value="">Selecciona tu país</option>
-            <option value="México">México</option>
-            <option value="Estados Unidos">Estados Unidos</option>
-            <option value="Canadá">Canadá</option>
-            {/* Agrega más países según sea necesario */}
+            {countryList.map((country) => (
+              <option key={country.name} value={country.name}>
+                {country.name}
+              </option>
+            ))}
           </select>
         </div>
         <div>
@@ -125,10 +141,11 @@ export default function Step1({ formData, handleChange }) {
             required
           >
             <option value="">Selecciona tu estado</option>
-            <option value="Yucatán">Yucatán</option>
-            <option value="Quintana Roo">Quintana Roo</option>
-            <option value="Ciudad de México">Ciudad de México</option>
-            {/* Agrega más estados según sea necesario */}
+            {(statesByCountry[formData.pais] || []).map((state) => (
+              <option key={state} value={state}>
+                {state}
+              </option>
+            ))}
           </select>
         </div>
         <div>
@@ -144,10 +161,11 @@ export default function Step1({ formData, handleChange }) {
             required
           >
             <option value="">Selecciona tu ciudad</option>
-            <option value="Mérida">Mérida</option>
-            <option value="Cancún">Cancún</option>
-            <option value="Monterrey">Monterrey</option>
-            {/* Agrega más ciudades según sea necesario */}
+            {(citiesByState[formData.estado] || []).map((city) => (
+              <option key={city} value={city}>
+                {city}
+              </option>
+            ))}
           </select>
         </div>
         <div>

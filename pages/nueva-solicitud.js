@@ -36,14 +36,16 @@ export default function NuevaSolicitud() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-blue-50">
-      <h1 className="text-3xl font-bold text-blue-600 mb-2">Solicitud de Visa Americana</h1>
-      <p className="text-lg text-gray-700 text-center mb-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-blue-50 px-4 sm:px-8">
+      <h1 className="text-3xl font-bold text-blue-600 mb-4 mt-8 text-center">
+        Solicitud de Visa Americana
+      </h1>
+      <p className="text-lg text-gray-700 text-center mb-6">
         Has iniciado el proceso para tramitar tu visa. Ingresa los datos solicitados para poder realizar el trámite con nosotros.
       </p>
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-12 rounded-lg shadow-md w-full max-w-4xl"
+        className="bg-white p-8 sm:p-12 rounded-lg shadow-md w-full max-w-4xl"
       >
         {step === 1 && <Step1 formData={formData} handleChange={handleChange} />}
         {step === 2 && <Step2 formData={formData} handleChange={handleChange} />}
