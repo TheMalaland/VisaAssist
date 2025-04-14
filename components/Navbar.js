@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 export default function Navbar() {
@@ -10,6 +10,18 @@ export default function Navbar() {
     const newLocale = locale === 'es' ? 'en' : 'es'; // Cambia entre español e inglés
     router.push(router.pathname, router.asPath, { locale: newLocale });
   };
+
+  // Efecto para deshabilitar el scroll cuando el menú está abierto
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'; // Deshabilita el scroll
+    } else {
+      document.body.style.overflow = ''; // Restaura el scroll
+    }
+    return () => {
+      document.body.style.overflow = ''; // Limpia el estilo al desmontar
+    };
+  }, [isOpen]);
 
   return (
     <nav className="bg-gray-300 shadow p-4">
