@@ -90,7 +90,7 @@ export default function Navbar() {
           {/* Tachita para cerrar */}
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 text-white hover:text-gray-400 focus:outline-none"
+            className="absolute top-4 right-4 text-white hover:text-gray-400 focus:outline-none z-50"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
