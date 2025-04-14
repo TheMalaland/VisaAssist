@@ -2,6 +2,24 @@ import { useState } from 'react';
 import Step1 from '../components/NuevaSolicitudStep1';
 import Step2 from '../components/NuevaSolicitudStep2';
 import Step3 from '../components/NuevaSolicitudStep3';
+import Step4 from '../components/NuevaSolicitudStep4';
+import Step5 from '../components/NuevaSolicitudStep5';
+import Step6 from '../components/NuevaSolicitudStep6';
+import Step7 from '../components/NuevaSolicitudStep7';
+import Step8 from '../components/NuevaSolicitudStep8';
+import Step9 from '../components/NuevaSolicitudStep9';
+import Step10 from '../components/NuevaSolicitudStep10';
+
+
+/** 
+import Step5 from '../components/NuevaSolicitudStep5';
+import Step6 from '../components/NuevaSolicitudStep6';
+import Step7 from '../components/NuevaSolicitudStep7';
+import Step8 from '../components/NuevaSolicitudStep8';
+import Step9 from '../components/NuevaSolicitudStep9';
+import Step10 from '../components/NuevaSolicitudStep10';
+import Step11 from '../components/NuevaSolicitudStep11';
+*/
 
 export default function NuevaSolicitud() {
   const [formData, setFormData] = useState({
@@ -12,6 +30,14 @@ export default function NuevaSolicitud() {
     nacionalidad: '',
     pais: '',
     estado: '',
+    // Campos adicionales para los pasos 5-11
+    step5Field1: '',
+    step6Field1: '',
+    step7Field1: '',
+    step8Field1: '',
+    step9Field1: '',
+    step10Field1: '',
+    step11Field1: '',
   });
 
   const [step, setStep] = useState(1); // Controla el paso actual
@@ -22,11 +48,11 @@ export default function NuevaSolicitud() {
   };
 
   const handleNext = () => {
-    setStep(step + 1);
+    if (step < 10) setStep(step + 1);
   };
 
   const handleBack = () => {
-    setStep(step - 1);
+    if (step > 1) setStep(step - 1);
   };
 
   const handleSubmit = (e) => {
@@ -50,6 +76,14 @@ export default function NuevaSolicitud() {
         {step === 1 && <Step1 formData={formData} handleChange={handleChange} />}
         {step === 2 && <Step2 formData={formData} handleChange={handleChange} />}
         {step === 3 && <Step3 formData={formData} handleChange={handleChange} />}
+        {step === 4 && <Step4 formData={formData} handleChange={handleChange} />}
+        {step === 5 && <Step5 formData={formData} handleChange={handleChange} />}
+        {step === 6 && <Step6 formData={formData} handleChange={handleChange} />}
+        {step === 7 && <Step7 formData={formData} handleChange={handleChange} />}
+        {step === 8 && <Step8 formData={formData} handleChange={handleChange} />}
+        {step === 9 && <Step9 formData={formData} handleChange={handleChange} />}
+        {step === 10 && <Step10 formData={formData} handleChange={handleChange} />}
+
         <div className="flex justify-between mt-6">
           {step > 1 && (
             <button
@@ -60,7 +94,7 @@ export default function NuevaSolicitud() {
               Atrás
             </button>
           )}
-          {step < 3 ? (
+          {step < 10 ? (
             <button
               type="button"
               onClick={handleNext}
