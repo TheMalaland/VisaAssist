@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <main
-        className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-blue-300"
+        className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-blue-300 px-4 sm:px-6"
         style={{
           backgroundImage: "url('/visaamericana.jpg'), linear-gradient(to right, rgb(84, 94, 110), rgb(107, 157, 218))",
           backgroundBlendMode: "overlay",
@@ -20,8 +20,8 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
-        <h1 className="text-4xl font-bold text-white">Bienvenido a Visa Assist</h1>
-        <p className="mt-4 text-lg text-gray-100">
+        <h1 className="text-4xl font-bold text-white text-center">Bienvenido a Visa Assist</h1>
+        <p className="mt-4 text-lg text-gray-100 text-center">
           Te acompañamos en todo el proceso para obtener tu visa americana, asegurando que tu solicitud esté lista de manera óptima
         </p>
         <div className="mt-6 flex space-x-4">
@@ -41,13 +41,13 @@ export default function Home() {
       </main>
 
       {/* Sección "Nuestros Servicios" */}
-      <section className="flex flex-col items-center justify-center py-16 bg-blue-100">
-        <h2 className="text-3xl font-semibold text-gray-800">Nuestros Servicios</h2>
-        <p className="mt-6 text-center text-gray-700 max-w-4xl text-xl text-justify">
+      <section className="flex flex-col items-center justify-center py-16 bg-blue-100 px-4 sm:px-6">
+        <h2 className="text-3xl font-semibold text-gray-800 text-center">Nuestros Servicios</h2>
+        <p className="mt-6 text-justify text-gray-700 max-w-4xl text-xl">
           Durante más de 12 años hemos acompañado a cientos de personas en su camino hacia la aprobación de su visa americana. Nuestro equipo está comprometido con ofrecer un servicio personalizado, profesional y confiable, brindando asesoría integral en cada etapa del proceso. Nos encargamos de los aspectos técnicos y te preparamos emocionalmente para que enfrentes con seguridad y claridad cada paso del trámite.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-16 w-full max-w-6xl px-2">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-16 w-full max-w-6xl">
           {/* Servicio 1 */}
           <div className="p-6 bg-white rounded-2xl shadow-md border border-blue-200">
             <h3 className="text-xl font-bold text-blue-600 text-center">Llenado Profesional de Formularios</h3>
@@ -68,20 +68,20 @@ export default function Home() {
           <div className="p-6 bg-white rounded-2xl shadow-md border border-blue-200">
             <h3 className="text-xl font-bold text-blue-600 text-center">Entrenamiento para la Entrevista</h3>
             <p className="mt-3 text-gray-600 text-justify">
-              Te preparamos con simulacioneaas reales de entrevista, análisis de posibles preguntas, y recomendaciones específicas basadas en tu perfil. Nuestro objetivo es que llegues seguro, confiado y con una comunicación clara, lo que aumenta considerablemente tus probabilidades de éxito.
+              Te preparamos con simulaciones reales de entrevista, análisis de posibles preguntas, y recomendaciones específicas basadas en tu perfil. Nuestro objetivo es que llegues seguro, confiado y con una comunicación clara, lo que aumenta considerablemente tus probabilidades de éxito.
             </p>
           </div>
         </div>
       </section>
 
       {/* Sección "Proceso Sencillo" */}
-      <section className="py-16 bg-blue-50">
+      <section className="py-16 bg-blue-50 px-4 sm:px-6">
         <div className="flex flex-col items-center justify-center">
           <h2 className="text-3xl font-semibold text-blue-600 mb-8 text-center">Proceso Sencillo</h2>
           <div className="w-full max-w-6xl">
             <div className="relative">
               {/* Línea horizontal */}
-              <div className="absolute top-[55%] w-full h-1 bg-gray-300 hidden md:block"></div>
+              <div className="absolute top-[15%] w-full h-1 bg-gray-300 hidden md:block"></div>
 
               {/* Contenedor de pasos */}
               <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 relative z-10">
@@ -151,31 +151,14 @@ export default function Home() {
       </section>
 
       {/* Sección "Asesoramiento por Expertos" */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-gray-100 px-4 sm:px-6">
         <div className="flex flex-col items-center justify-center">
-          <h2 className="text-3xl font-semibold text-blue-600">Asesoramiento por Expertos</h2>
+          <h2 className="text-3xl font-semibold text-blue-600 text-center">🧠 Asesoramiento por Expertos</h2>
           <p className="mt-4 text-center text-gray-600 max-w-2xl">
-            Nuestro equipo está compuesto por expertos en visas.
+            🔒 Evita caer en fraudes migratorios
           </p>
-        </div>
-      </section>
-
-      {/* Sección "Clientes Satisfechos" */}
-      <section className="py-16 bg-blue-50">
-        <div className="flex flex-col items-center justify-center">
-          <h2 className="text-3xl font-semibold text-blue-600">Clientes Satisfechos</h2>
           <p className="mt-4 text-center text-gray-600 max-w-2xl">
-            Miles de clientes han confiado en nosotros y han obtenido su visa.
-          </p>
-        </div>
-      </section>
-
-      {/* Sección "Más de 10 Años de Experiencia" */}
-      <section className="py-16 bg-gray-100">
-        <div className="flex flex-col items-center justify-center">
-          <h2 className="text-3xl font-semibold text-blue-600">Más de 10 Años de Experiencia</h2>
-          <p className="mt-4 text-center text-gray-600 max-w-2xl">
-            Una década ayudando a personas a cumplir sus sueños.
+            Nuestro equipo está compuesto por expertos en visas, quienes te guiarán durante todo el proceso con precisión y confianza. Con nosotros, tendrás la seguridad de recibir información verificada y apoyo profesional en cada paso.
           </p>
         </div>
       </section>

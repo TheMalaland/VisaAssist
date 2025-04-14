@@ -73,19 +73,25 @@ export default function Navbar() {
 
       {/* Menú desplegable móvil */}
       {isOpen && (
-        <div className="md:hidden mt-4 space-y-2">
-          <a href="/" className="block px-4 py-2 text-gray-700 hover:bg-gray-200">Inicio</a>
-          <a href="/agendar" className="block px-4 py-2 text-gray-700 hover:bg-gray-200">Agendar</a>
-          <a href="/pagar" className="block px-4 py-2 text-gray-700 hover:bg-gray-200">Pagar</a>
-          <a href="/contacto" className="block px-4 py-2 text-gray-700 hover:bg-gray-200">Contacto</a>
-          <a href="/faqs" className="block px-4 py-2 text-gray-700 hover:bg-gray-200">FAQs</a>
-          <a href="/Visa" className="block px-4 py-2 text-gray-700 hover:bg-gray-200">Visa B1/B2</a>
-          <a href="/Visa Familias" className="block px-4 py-2 text-gray-700 hover:bg-gray-200">Visa Familias</a>
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-50 z-50 flex flex-col items-center justify-center px-6">
+          <a href="/" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">Inicio</a>
+          <a href="/agendar" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">Agendar</a>
+          <a href="/pagar" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">Pagar</a>
+          <a href="/contacto" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">Contacto</a>
+          <a href="/faqs" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">FAQs</a>
+          <a href="/Visa" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">Visa B1/B2</a>
+          <a href="/Visa Familias" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">Visa Familias</a>
           <button
             onClick={changeLanguage}
-            className="block w-full px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300"
+            className="block w-full px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 text-center"
           >
             {locale === 'es' ? 'EN' : 'ES'}
+          </button>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 text-center"
+          >
+            Cerrar
           </button>
         </div>
       )}
