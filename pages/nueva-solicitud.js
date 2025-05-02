@@ -1,14 +1,17 @@
 import { useState } from 'react';
-import Step1 from '../components/NuevaSolicitudStep1';
-import Step2 from '../components/NuevaSolicitudStep2';
-import Step3 from '../components/NuevaSolicitudStep3';
-import Step4 from '../components/NuevaSolicitudStep4';
-import Step5 from '../components/NuevaSolicitudStep5';
-import Step6 from '../components/NuevaSolicitudStep6';
-import Step7 from '../components/NuevaSolicitudStep7';
-import Step8 from '../components/NuevaSolicitudStep8';
-import Step9 from '../components/NuevaSolicitudStep9';
-import Step10 from '../components/NuevaSolicitudStep10';
+import Step1 from '../components/new_form_steps/NuevaSolicitudStep1';
+import Step2 from '../components/new_form_steps/NuevaSolicitudStep2';
+import Step3 from '../components/new_form_steps/NuevaSolicitudStep3';
+import Step4 from '../components/new_form_steps/NuevaSolicitudStep4';
+import Step5 from '../components/new_form_steps/NuevaSolicitudStep5';
+import Step6 from '../components/new_form_steps/NuevaSolicitudStep6';
+import Step7 from '../components/new_form_steps/NuevaSolicitudStep7';
+import Step8 from '../components/new_form_steps/NuevaSolicitudStep8';
+import Step9 from '../components/new_form_steps/NuevaSolicitudStep9';
+import Step10 from '../components/new_form_steps/NuevaSolicitudStep10';
+import Step11 from '../components/new_form_steps/NuevaSolicitudStep11';
+
+
 
 
 /** 
