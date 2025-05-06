@@ -1,6 +1,30 @@
 {
+    "homeTitle": "Visa Assist - Inicio",
+    "homeDescription": "Gestiona tu proceso de visa americana fácilmente.",
     "welcome": "Bienvenido a Visa Assist",
-    "new_request": "Nueva Solicitud",
+    "homeSubtitle": "Te acompañamos en todo el proceso para obtener tu visa americana, asegurando que tu solicitud esté lista de manera óptima.",
+    "newRequest": "Nueva Solicitud",
     "renewal": "Renovación",
-    "language": "Cambiar Idioma"
-  }
+    "ourServices": "Nuestros Servicios",
+    "servicesDescription": "Durante más de 12 años hemos acompañado a cientos de personas en su camino hacia la aprobación de su visa americana. Nuestro equipo está comprometido con ofrecer un servicio personalizado, profesional y confiable.",
+    "service1Title": "Llenado Profesional de Formularios",
+    "service1Description": "Nos encargamos de completar cuidadosamente el formulario DS-160, asegurando que la información sea clara, precisa y esté alineada con los requisitos del consulado.",
+    "service2Title": "Gestión de Citas Consulares",
+    "service2Description": "Nos encargamos de todo el proceso de agendamiento, desde el perfil en la plataforma oficial hasta la programación de tus citas en el CAS y el consulado.",
+    "service3Title": "Entrenamiento para la Entrevista",
+    "service3Description": "Te preparamos con simulaciones reales de entrevista, análisis de posibles preguntas, y recomendaciones específicas basadas en tu perfil.",
+    "simpleProcess": "Proceso Sencillo",
+    "step1Title": "Contáctanos y agenda tu asesoría",
+    "step1Description": "Evaluamos tu situación y resolvemos tus dudas iniciales.",
+    "step2Title": "Realiza el pago del servicio",
+    "step2Description": "Confirmamos tu inscripción y comenzamos a trabajar contigo.",
+    "step3Title": "Llenamos tus formularios y agendamos tu cita",
+    "step3Description": "Te asistimos con todo el papeleo.",
+    "step4Title": "Prepárate con nosotros para la entrevista",
+    "step4Description": "Te guiamos con consejos y simulacros.",
+    "step5Title": "Seguimiento personalizado",
+    "step5Description": "Estaremos en contacto continuo hasta el final.",
+    "expertAdvice": "🧠 Asesoramiento por Expertos",
+    "avoidFraud": "🔒 Evita caer en fraudes migratorios",
+    "expertSupport": "Nuestro equipo está compuesto por expertos en visas, quienes te guiarán durante todo el proceso con precisión y confianza. Con nosotros, tendrás la seguridad de recibir información verificada y apoyo profesional en cada paso."
+}

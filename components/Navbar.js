@@ -1,14 +1,20 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // Estado para el menú móvil
   const router = useRouter();
-  const { locale } = router;
+  const { t, i18n } = useTranslation('common'); // Carga las traducciones desde common.json
 
-  const changeLanguage = () => {
-    const newLocale = locale === 'es' ? 'en' : 'es'; // Cambia entre español e inglés
-    router.push(router.pathname, router.asPath, { locale: newLocale });
+  const changeLanguage = async () => {
+    const newLocale = i18n.language === 'es' ? 'en' : 'es'; // Cambia entre español e inglés
+    try {
+      await i18n.changeLanguage(newLocale); // Cambia el idioma en i18next
+      await router.push(router.pathname, router.asPath, { locale: newLocale }); // Actualiza la URL con el nuevo idioma
+    } catch (error) {
+      console.error('Error al cambiar el idioma:', error);
+    }
   };
 
   // Efecto para deshabilitar el scroll cuando el menú está abierto
@@ -44,17 +50,17 @@ export default function Navbar() {
 
         {/* Menú de escritorio */}
         <div className="hidden md:flex space-x-6 items-center">
-          <a href="/agendar" className="text-gray-700 hover:text-blue-500">Agendar</a>
-          <a href="/pagar" className="text-gray-700 hover:text-blue-500">Pagar</a>
-          <a href="/contacto" className="text-gray-700 hover:text-blue-500">Contacto</a>
-          <a href="/faqs" className="text-gray-700 hover:text-blue-500">FAQs</a>
-          <a href="/Visa" className="text-gray-700 hover:text-blue-500">Visa B1/B2</a>
-          <a href="/Visa Familias" className="text-gray-700 hover:text-blue-500">Visa Familias</a>
+          <a href="/agendar" className="text-gray-700 hover:text-blue-500">{t('schedule')}</a>
+          <a href="/pagar" className="text-gray-700 hover:text-blue-500">{t('pay')}</a>
+          <a href="/contacto" className="text-gray-700 hover:text-blue-500">{t('contact')}</a>
+          <a href="/faqs" className="text-gray-700 hover:text-blue-500">{t('faqs')}</a>
+          <a href="/Visa" className="text-gray-700 hover:text-blue-500">{t('visaB1B2')}</a>
+          <a href="/Visa Familias" className="text-gray-700 hover:text-blue-500">{t('visaFamilies')}</a>
           <button
             onClick={changeLanguage}
             className="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300"
           >
-            {locale === 'es' ? 'EN' : 'ES'}
+            {i18n.language === 'es' ? 'EN' : 'ES'}
           </button>
         </div>
 
@@ -85,17 +91,17 @@ export default function Navbar() {
       {/* Menú desplegable móvil */}
       {isOpen && (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-50 z-50 flex flex-col items-center justify-center px-6">
-          <a href="/agendar" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">Agendar</a>
-          <a href="/pagar" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">Pagar</a>
-          <a href="/contacto" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">Contacto</a>
-          <a href="/faqs" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">FAQs</a>
-          <a href="/Visa" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">Visa B1/B2</a>
-          <a href="/Visa Familias" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">Visa Familias</a>
+          <a href="/agendar" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">{t('schedule')}</a>
+          <a href="/pagar" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">{t('pay')}</a>
+          <a href="/contacto" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">{t('contact')}</a>
+          <a href="/faqs" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">{t('faqs')}</a>
+          <a href="/Visa" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">{t('visaB1B2')}</a>
+          <a href="/Visa Familias" className="block w-full px-4 py-2 text-white hover:bg-gray-700 rounded text-center">{t('visaFamilies')}</a>
           <button
             onClick={changeLanguage}
             className="block w-full px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 text-center"
           >
-            {locale === 'es' ? 'EN' : 'ES'}
+            {i18n.language === 'es' ? 'EN' : 'ES'}
           </button>
           {/* Tachita para cerrar */}
           <button
@@ -118,3 +124,4 @@ export default function Navbar() {
     </nav>
   );
 }
+// Fin del componente Navbar

@@ -27,10 +27,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/nueva-solicitud": [
+    "/agendar": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/nueva-solicitud.js"
+      "static/chunks/pages/agendar.js"
+    ],
+    "/pagar": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/pagar.js"
     ]
   },
   "ampFirstPages": []

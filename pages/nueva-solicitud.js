@@ -11,19 +11,6 @@ import Step9 from '../components/new_form_steps/NuevaSolicitudStep9';
 import Step10 from '../components/new_form_steps/NuevaSolicitudStep10';
 import Step11 from '../components/new_form_steps/NuevaSolicitudStep11';
 
-
-
-
-/** 
-import Step5 from '../components/NuevaSolicitudStep5';
-import Step6 from '../components/NuevaSolicitudStep6';
-import Step7 from '../components/NuevaSolicitudStep7';
-import Step8 from '../components/NuevaSolicitudStep8';
-import Step9 from '../components/NuevaSolicitudStep9';
-import Step10 from '../components/NuevaSolicitudStep10';
-import Step11 from '../components/NuevaSolicitudStep11';
-*/
-
 export default function NuevaSolicitud() {
   const [formData, setFormData] = useState({
     nombre: '',
