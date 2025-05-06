@@ -1,4 +1,10 @@
 {
+    "schedule": "Agendar",
+    "pay": "Pagar",
+    "contact": "Contacto",
+    "faqs": "Preguntas Frecuentes",
+    "visaB1B2": "Visa B1/B2",
+    "visaFamilies": "Visas Familiares",
     "homeTitle": "Visa Assist - Inicio",
     "homeDescription": "Gestiona tu proceso de visa americana fácilmente.",
     "welcome": "Bienvenido a Visa Assist",
